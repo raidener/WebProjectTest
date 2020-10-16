@@ -4,6 +4,6 @@
     <title>Start Page</title>
 </head>
 <body>
-Start Page
+<h1 style="color: #ffaa54" ><i>Start Page</i></h1>
 </body>
 </html>
