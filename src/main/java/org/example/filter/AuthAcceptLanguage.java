@@ -4,6 +4,7 @@ import org.apache.commons.lang3.StringUtils;
 
 import javax.servlet.*;
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 public class AuthAcceptLanguage implements Filter {
@@ -24,7 +25,7 @@ public class AuthAcceptLanguage implements Filter {
             System.out.println("Header In AuthAcceptLanguage was not found!");
             RequestDispatcher dispatcher = request.getRequestDispatcher("/error500");
             System.out.println("Forward will be done");
-            dispatcher.forward(request,response);
+
         }
         chain.doFilter(request, response);
 
