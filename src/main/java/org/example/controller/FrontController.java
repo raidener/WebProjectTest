@@ -36,6 +36,8 @@ public class FrontController extends HttpServlet {
             System.out.println("Forward will be done");
             req.setAttribute("userNames",userRepository.findAll().stream().map(User::getName)
             .collect(Collectors.joining(",")));
+            req.setAttribute("userSurname",userRepository.findAll().stream().map(User::getSurname)
+                    .collect(Collectors.joining(",")));
             dispatcher.forward(req,resp);
         }
     }
